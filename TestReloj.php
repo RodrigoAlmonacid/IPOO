@@ -1,7 +1,7 @@
 <?php
-include "Reloj.php";
+include_once "Reloj.php";
 $test_reloj = new Reloj(23, 10, 10);
 $test_reloj -> incremento();
-echo $test_reloj -> __toString();
+echo $test_reloj;
 
 ?>

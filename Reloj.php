@@ -4,7 +4,8 @@
 reciba el mensaje de incremento deberá pasar a 00:00:00.*/
 
 class Reloj {
-    //Atributos
+    //Variables instancia
+    //Int $horas, $minutos, $segundos
     private $horas;
     private $minutos;
     private $segundos;
@@ -72,8 +73,8 @@ class Reloj {
     }
 
     public function __toString(){
-		return "(".$this->getHoras().":".$this->getMinutos().":".$this->getSegundos().")\n";
-	} 
+		return "(".$this->getHoras()." hs:".$this->getMinutos()." min:".$this->getSegundos()." seg)\n";
+	}
 }
 ?>
 
