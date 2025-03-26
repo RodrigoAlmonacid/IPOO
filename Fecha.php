@@ -14,12 +14,14 @@ class Fecha {
     private $dia;
     private $mes;
     private $anio;
+    private $calendarioAnual;
 
 public function __construct($dia, $mes, $anio)
 {
     $this -> dia = $dia;
     $this -> mes = $mes;
     $this -> anio = $anio;
+    $this -> calendarioAnual = $this -> calendario();
 }    
 
 public function getDia (){
