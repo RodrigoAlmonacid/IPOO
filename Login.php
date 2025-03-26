@@ -12,6 +12,7 @@ class Login {
     private $contrasena;
     private $frase;
 
+    //Metodos
     public function __construct($usuario, $contrasena, $frase)
     {
         $this -> nombreUsuario = $usuario;
@@ -38,6 +39,20 @@ class Login {
     }
     public function setFrase ($frase){
         $this -> frase = $frase;
+    }
+
+    public function contraActual (){
+        //funcion que arma un arreglo con los datos de usuario actual
+        $contraActual = [$this -> getContrasena(), $this -> getFrase()];
+        return $contraActual;
+    }
+
+    public function almacenaContra (){
+        array_push($almacenaContra, $this -> contraActual());
+        if (count($almacenaContra) > 4){
+            array_shift($almacenaContra);
+        }
+        return $almacenaContra;
     }
 
     
